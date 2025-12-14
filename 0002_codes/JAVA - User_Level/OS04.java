@@ -1,21 +1,17 @@
-import java.io.IOException;
-import java.util.Scanner;
-
 /*
  * OS04 - basic command interpreter
- * This program:
  * - shows a simple command prompt
  * - reads a command from the user
  * - runs the command using the operating system
  * - exits when the user types "exit" or "quit"
  */
-
+import java.io.IOException;
+import java.util.Scanner;
 public class OS04 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String command;
-
         System.out.println("=========================================");
         System.out.println("        OS04 - basic interpreter         ");
         System.out.println("type commands to run them");
@@ -34,17 +30,14 @@ public class OS04 {
                 System.out.println("exiting os04");
                 break;
             }
-
             try {
                 /* split the command for ProcessBuilder */
                 String[] parts = command.split("\\s+");
-
                 ProcessBuilder builder = new ProcessBuilder(parts);
                 builder.inheritIO(); // show output directly in console
 
                 Process process = builder.start();
                 process.waitFor();
-
             } catch (IOException e) {
                 System.out.println("could not run command");
             } catch (InterruptedException e) {
@@ -52,7 +45,7 @@ public class OS04 {
                 Thread.currentThread().interrupt();
             }
         }
-
         System.out.println("=========================================");
     }
 }
+
