@@ -1,6 +1,3 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 /*
  * OS00 - system welcome inf
  * this program prints:
@@ -9,6 +6,8 @@ import java.time.format.DateTimeFormatter;
  * - current user name
  * - current date and time
  */
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class OS00 {
 
@@ -30,13 +29,11 @@ public class OS00 {
 
         /* get user name */
         String user = System.getProperty("user.name", "unknown user");
-
         /* get current date and time */
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter =
                 DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String timeStr = now.format(formatter);
-
         /* print info */
         System.out.println("=========================================");
         System.out.println("               OS00 - info               ");
@@ -48,3 +45,4 @@ public class OS00 {
         System.out.println("=========================================");
     }
 }
+
