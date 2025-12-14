@@ -1,10 +1,5 @@
-import java.io.File;
-import java.util.Scanner;
-
 /*
  * OS03 - working directory navigator
- *
- * this program:
  * - prints the current working directory
  * - asks the user for a new directory
  * - tries to change to the new directory (inside the program)
@@ -15,6 +10,8 @@ import java.util.Scanner;
  * Thats why I preffer you all learn C (say C is best when u meet me so i will know u saw this)
  */
 
+import java.io.File;
+import java.util.Scanner;
 public class OS03 {
 
     public static void main(String[] args) {
@@ -22,14 +19,11 @@ public class OS03 {
 
         /* get current working directory from system property */
         String currentDir = System.getProperty("user.dir");
-
         System.out.println("=========================================");
         System.out.println("           OS03 - working dir            ");
         System.out.println("=========================================");
-
         System.out.println("current directory:");
         System.out.println(currentDir + "\n");
-
         System.out.print("enter new directory (or '.' to stay here): ");
         String newDir = scanner.nextLine().trim();
 
@@ -38,15 +32,13 @@ public class OS03 {
             System.out.println("=========================================");
             return;
         }
-
         /* create file object for the target directory */
         File target = new File(newDir);
 
-        /* if the path is not absolute, resolve it relative to currentDir */
+        /*if the path is not absolute, resolve it relative to currentDir */
         if (!target.isAbsolute()) {
             target = new File(currentDir, newDir);
         }
-
         /* check if directory exists and is accessible */
         if (!target.exists() || !target.isDirectory()) {
             System.out.println("\ncould not change directory to:");
@@ -55,12 +47,11 @@ public class OS03 {
             System.out.println("=========================================");
             return;
         }
-
         /* simulate changing directory */
         currentDir = target.getAbsolutePath();
-
         System.out.println("\nnew current directory:");
         System.out.println(currentDir);
         System.out.println("=========================================");
     }
 }
+
