@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /*
  * OS02 - path breakdown tool
  * this program:
@@ -7,7 +5,7 @@ import java.util.Scanner;
  * - splits it into separate directories
  * - prints each directory on a new line
  */
-
+import java.util.Scanner;
 public class OS02 {
 
     public static void main(String[] args) {
@@ -36,14 +34,13 @@ public class OS02 {
         }
 
         System.out.println("directories in PATH:\n");
-
-        /* split and print each directory */
+        /*split and print each directory */
         String[] dirs = path.split(separator);
 
         for (String dir : dirs) {
             System.out.println(dir);
         }
-
         System.out.println("\n=========================================");
     }
 }
+
