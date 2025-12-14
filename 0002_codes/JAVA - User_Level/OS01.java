@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /*
  * OS01 - environment variable explorer
  * this program:
@@ -7,7 +5,7 @@ import java.util.Scanner;
  * - reads its value from the operating system
  * - prints the value or a message if it does not exist
  */
-
+import java.util.Scanner;
 public class OS01 {
 
     public static void main(String[] args) {
@@ -38,3 +36,4 @@ public class OS01 {
         System.out.println("=========================================");
     }
 }
+
