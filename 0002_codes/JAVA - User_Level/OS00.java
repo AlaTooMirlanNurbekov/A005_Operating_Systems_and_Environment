@@ -1,5 +1,5 @@
 /*
- * OS00 - system welcome inf
+ * OS00 - system welcome info
  * this program prints:
  * - operating system name
  * - cpu architecture
@@ -45,4 +45,5 @@ public class OS00 {
         System.out.println("=========================================");
     }
 }
+
 
