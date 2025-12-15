@@ -1,7 +1,6 @@
+// OS09 - disk space viewer
+// Shows total, free, and used disk space helps understand storage as an operating system resource */
 import java.io.File;
-/* OS09 - disk space viewer
- * Shows total, free, and used disk space helps understand storage as an operating system resource */
-
 public class OS09 {
 
     public static void main(String[] args) {
@@ -27,3 +26,4 @@ public class OS09 {
         return mb + " MB";
     }
 }
+
