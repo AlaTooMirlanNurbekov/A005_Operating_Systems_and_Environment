@@ -1,3 +1,10 @@
+/*
+ * OS03 : working directory navigator
+ * - prints the current working directory
+ * - asks the user for a new directory
+ * - tries to change to the new directory
+ * - prints the updated working directory or an error message
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,24 +19,12 @@
     #define change_dir chdir
 #endif
 
-/*
- * OS03 : working directory navigator
- *
- * This program:
- * - prints the current working directory
- * - asks the user for a new directory
- * - tries to change to the new directory
- * - prints the updated working directory or an error message
- */
-
 int main(void) {
     char current_dir[1024];
     char new_dir[1024];
-
     printf("=========================================\n");
     printf("           OS03 - working dir            \n");
     printf("=========================================\n");
-
     /* get and print current working directory */
     if (get_cwd(current_dir, sizeof(current_dir)) == NULL) {
         printf("could not get current directory\n");
@@ -46,7 +41,6 @@ int main(void) {
         printf("=========================================\n");
         return 1;
     }
-
     /* remove newline at the end if present */
     char *newline = strchr(new_dir, '\n');
     if (newline != NULL) {
@@ -67,16 +61,13 @@ int main(void) {
         printf("=========================================\n");
         return 1;
     }
-
     /* print updated directory */
     if (get_cwd(current_dir, sizeof(current_dir)) == NULL) {
         printf("\nchanged directory, but could not read new path\n");
         printf("=========================================\n");
         return 1;
     }
-
     printf("\nnew current directory:\n%s\n", current_dir);
     printf("=========================================\n");
-
     return 0;
 }
