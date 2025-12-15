@@ -1,6 +1,6 @@
-import java.util.Scanner;
 // OS12 - simple login simulator (a basic login check using username and password)
-// simple authentication idea
+
+import java.util.Scanner;
 
 public class OS12 {
 
@@ -38,3 +38,4 @@ public class OS12 {
         System.out.println("=========================================");
     }
 }
+
