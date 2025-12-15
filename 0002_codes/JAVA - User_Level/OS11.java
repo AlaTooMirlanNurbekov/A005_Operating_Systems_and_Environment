@@ -1,15 +1,13 @@
-import java.io.File;
 // OS11 - file type classifier
 // counts how many files of each extension exist in a directory
+import java.io.File;
 
 public class OS11 {
 
     public static void main(String[] args) {
-
         System.out.println("=========================================");
         System.out.println("          OS11 - file classifier         ");
         System.out.println("=========================================");
-
         String path = System.getProperty("user.dir");
         File folder = new File(path);
 
@@ -20,7 +18,6 @@ public class OS11 {
         }
 
         int txt = 0, javaFiles = 0, png = 0, jpg = 0, other = 0;
-
         File[] files = folder.listFiles();
 
         if (files != null) {
@@ -50,3 +47,4 @@ public class OS11 {
         System.out.println("=========================================");
     }
 }
+
