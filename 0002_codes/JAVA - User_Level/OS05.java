@@ -1,18 +1,18 @@
+/*
+ * OS05 - file creator and reader
+ * Idea:
+ * - asks the user for a file name
+ * - asks the user to type some text
+ * - saves the text into the file
+ * - reads the file back and prints its contents
+ */
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-/*
- * OS05 - file creator and reader
- *
- * Idea to:
- * - asks the user for a file name
- * - asks the user to type some text
- * - saves the text into the file
- * - reads the file back and prints its contents
- */
+
 public class OS05 {
 
     public static void main(String[] args) {
@@ -41,7 +41,6 @@ public class OS05 {
             }
             content.append(line).append(System.lineSeparator());
         }
-
         /* write text to file */
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             writer.write(content.toString());
@@ -67,3 +66,4 @@ public class OS05 {
         System.out.println("=========================================");
     }
 }
+
