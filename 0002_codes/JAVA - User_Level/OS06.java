@@ -1,7 +1,3 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Scanner;
 /*
  * OS06 - error reporter and exception demo
  * - asks the user for a file name
@@ -9,6 +5,10 @@ import java.util.Scanner;
  * - reports specific errors if the file cannot be opened
  * - demonstrates how java uses exceptions to signal problems
  */
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class OS06 {
 
@@ -18,7 +18,6 @@ public class OS06 {
         System.out.println("=========================================");
         System.out.println("          OS06 - error reporter          ");
         System.out.println("=========================================");
-
         System.out.print("enter file name to open: ");
         String fileName = scanner.nextLine().trim();
 
@@ -39,7 +38,6 @@ public class OS06 {
                 System.out.println("first line in file:");
                 System.out.println(firstLine);
             }
-
         } catch (IOException e) {
             System.out.println("could not open file:");
             System.out.println("- reason: " + e.getMessage());
@@ -51,3 +49,4 @@ public class OS06 {
         System.out.println("=========================================");
     }
 }
+
