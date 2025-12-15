@@ -1,7 +1,6 @@
-import java.io.File;
 /* OS10 - directory tree printer
- prints all files and folders under a given directory
- * shows how the operating system structures files in a hierarchy*/
+ prints all files and folders under a given directory shows how the operating system structures files in a hierarchy*/
+import java.io.File;
 
 public class OS10 {
 
@@ -37,3 +36,4 @@ public class OS10 {
         }
     }
 }
+
