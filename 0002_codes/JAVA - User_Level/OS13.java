@@ -1,4 +1,3 @@
-
 // OS13 - safe command runner (allows running only a small set of allowed commands)
 // demonstrates controlled access to system functions
 
@@ -12,8 +11,7 @@ public class OS13 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        /* allowed commands */
+        //allowed commands
         Set<String> allowed = new HashSet<>(Arrays.asList(
                 "ls", // linux/mac
                 "dir", // windows
