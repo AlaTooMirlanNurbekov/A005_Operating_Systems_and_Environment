@@ -1,10 +1,9 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 /*
  * OS07 - system clock and timestamp tool
- * prints the current time in several formats
- * shows how the operating system provides time information
+ * Prints the current time in several formats. It shows how the operating system provides time information
  */
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class OS07 {
 
@@ -24,3 +23,4 @@ public class OS07 {
         System.out.println("=========================================");
     }
 }
+
