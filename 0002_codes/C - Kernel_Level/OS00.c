@@ -1,16 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
 /*
  * OS00 - system welcome info
- *
  * This program prints:
  * - operating system name
  * - cpu architecture
  * - current user name
  * - current date and time
  */
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main(void) {
     const char *os_name;
@@ -62,6 +60,6 @@ int main(void) {
     printf("current user     : %s\n", user);
     printf("current date/time: %s\n", time_str);
     printf("=========================================\n");
-
     return 0;
 }
+
